@@ -5,9 +5,9 @@
 
 class DistanceStepper : public AccelStepper {
     private:
-		int microSteps = 8;
+		int microSteps = 16;
 		int stepsPerRotation = 200;
-		float distancePerRotation = 8;
+		float distancePerRotation = 8; //lead screw distance
 
     public:
 		DistanceStepper(

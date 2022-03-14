@@ -6,9 +6,9 @@ void controller (float t, struct params params, float &Y);
 
 struct params {
     // ! MAX_EXTENSION CANNOT EXCEED 14mm
-    float max_extension = 14.0f; // Max entension of lead screw (mm)
-    float phase_shift = M_PI/2; // Angle of radial movement
-    float freq = 3.0f; // Period of one movement cycle (sec)
+    float max_extension; // Max entension of lead screw (mm)
+    float phase_shift; // Angle of radial movement
+    float freq; // Period of one movement cycle (sec)
 };
 
 
