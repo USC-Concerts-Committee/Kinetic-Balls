@@ -1,6 +1,5 @@
 #include <math.h>
-#include <vector>
-#include <array>
+
 
 void controller (float t, struct params params, float &Y);
 
