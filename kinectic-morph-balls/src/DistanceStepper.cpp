@@ -1,5 +1,6 @@
 #include "DistanceStepper.h"
 
+//DistanceStepper::DistanceStepper() {};
 
 DistanceStepper::DistanceStepper (
     uint8_t interface,
@@ -20,4 +21,9 @@ void DistanceStepper::moveToDistance(float distance)
 void DistanceStepper::moveRelative(float distance)
 {
     move(distance * microSteps * stepsPerRotation / distancePerRotation);
+}
+
+void DistanceStepper::runToDistance(float distance)
+{
+    runToNewPosition(distance * microSteps * stepsPerRotation / distancePerRotation);
 }

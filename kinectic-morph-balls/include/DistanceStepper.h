@@ -10,6 +10,9 @@ class DistanceStepper : public AccelStepper {
 		float distancePerRotation = 8; //lead screw distance
 
     public:
+
+		//DistanceStepper();
+
 		DistanceStepper(
 			uint8_t interface = AccelStepper::DRIVER, 
 			uint8_t StepPin = 2, 
@@ -20,6 +23,8 @@ class DistanceStepper : public AccelStepper {
 		void moveToDistance(float distance);
 
 		void moveRelative(float distance);
+
+		void runToDistance (float distance);
 };
 
 #endif
