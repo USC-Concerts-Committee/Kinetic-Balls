@@ -13,5 +13,5 @@ typedef struct
 
 extern MotionParams motion[12];
 
-void computeDistances (float t, MotionParams[], float (&Y)[12]);
-void updateSteppers (DistanceStepper(&Steppers)[12], float(&Y)[12]);
+void computeDistances (float t, MotionParams[], float &Y);
+void updateSteppers (DistanceStepper stepper, float &Y);
