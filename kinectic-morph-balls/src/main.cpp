@@ -49,14 +49,14 @@ void setup()
 	steppers[1] = DistanceStepper(motorInterfaceType, stepPin_1, dirPin_1);
 	steppers[2] = DistanceStepper(motorInterfaceType, stepPin_2, dirPin_2);
 	steppers[3] = DistanceStepper(motorInterfaceType, stepPin_3, dirPin_3);
-	steppers[4] = DistanceStepper(motorInterfaceType, stepPin_4, dirPin_4);
-	steppers[5] = DistanceStepper(motorInterfaceType, stepPin_5, dirPin_5);
-	steppers[6] = DistanceStepper(motorInterfaceType, stepPin_6, dirPin_6);
-	steppers[7] = DistanceStepper(motorInterfaceType, stepPin_7, dirPin_7);
-	steppers[8] = DistanceStepper(motorInterfaceType, stepPin_8, dirPin_8);
-	steppers[9] = DistanceStepper(motorInterfaceType, stepPin_9, dirPin_9);
-	steppers[10] = DistanceStepper(motorInterfaceType, stepPin_10, dirPin_10);
-	steppers[11] = DistanceStepper(motorInterfaceType, stepPin_11, dirPin_11);
+	// steppers[4] = DistanceStepper(motorInterfaceType, stepPin_4, dirPin_4);
+	// steppers[5] = DistanceStepper(motorInterfaceType, stepPin_5, dirPin_5);
+	// steppers[6] = DistanceStepper(motorInterfaceType, stepPin_6, dirPin_6);
+	// steppers[7] = DistanceStepper(motorInterfaceType, stepPin_7, dirPin_7);
+	// steppers[8] = DistanceStepper(motorInterfaceType, stepPin_8, dirPin_8);
+	// steppers[9] = DistanceStepper(motorInterfaceType, stepPin_9, dirPin_9);
+	// steppers[10] = DistanceStepper(motorInterfaceType, stepPin_10, dirPin_10);
+	// steppers[11] = DistanceStepper(motorInterfaceType, stepPin_11, dirPin_11);
 
 	// compute initial distances of steppers
 	computeDistances(0, motion, Y);

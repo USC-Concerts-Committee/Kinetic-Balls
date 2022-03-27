@@ -15,3 +15,5 @@ extern MotionParams motion[12];
 
 void computeDistances (float t, MotionParams[], float (&Y)[12]);
 void updateSteppers (DistanceStepper(&Steppers)[12], float(&Y)[12]);
+void setPosition (DistanceStepper(&Steppers)[12]);
+void testFunction(DistanceStepper(&Steppers)[12]);

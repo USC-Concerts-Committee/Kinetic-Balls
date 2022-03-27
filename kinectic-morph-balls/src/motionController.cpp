@@ -16,16 +16,16 @@ MotionParams motion[12] = {
     {10.0f, M_PI/2, 2.1f}
 };
 
-void computeDistances (float t, MotionParams motion[], float (&Y)[12])
+void computeDistances (float t, MotionParams motion[], float (&Y)[4])
 {
     for (int i = 0; i < 12; i++) {
-        Y[i] = motion[i].max_extension * (-1) 
+        Y[i] = motion[i].max_extension * (0.5) 
                 * cosf(2 * M_PI * motion[i].freq * t + motion[i].phase_shift) 
                 + (motion[i].max_extension) / 2;
     }
 }
 
-void updateSteppers (DistanceStepper(&Steppers)[12], float(&Y)[12])
+void updateSteppers (DistanceStepper(&Steppers)[4], float(&Y)[4])
 {
     for (int i = 0; i < 12; i++) \
     {
@@ -37,5 +37,20 @@ void updateSteppers (DistanceStepper(&Steppers)[12], float(&Y)[12])
         Steppers[i].run();
     }
 
+}
+
+void setPosition (DistanceStepper(&Steppers)[4])
+{
+    for (int i = 0; i < 4; i++) {
+        Steppers[i].setCurrentPosition(Steppers[i].currentPosition());
+    }
+}
+
+void testFunction(DistanceStepper(&Steppers)[4]) {
+    for (int i = 0; i < 4; i++) {
+        if (Steppers[i].distanceToGo() == 0)
+        Steppers[i].moveTo(-Steppers[i].currentPosition());
+        Steppers[i].run();
+    }
 }
     
